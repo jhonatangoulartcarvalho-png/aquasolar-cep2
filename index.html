@@ -1,1 +1,1972 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="AquaSolar CEP 2.0 - Sistema inteligente e sustentável para o aquecimento da piscina térmica do Colégio Estadual do Paraná.">
+
+    <title>AquaSolar CEP 2.0 | Projeto Integrador</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-sun">
+            <i class="fa-solid fa-sun"></i>
+        </div>
+
+        <h2>AquaSolar CEP</h2>
+        <p>Inicializando sistema sustentável...</p>
+
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+
+    <!-- BARRA DE PROGRESSO -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+
+                AquaSolar <strong>CEP</strong>
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#inicio" class="active">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#desafio">
+                        O Desafio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#solucao">
+                        Solução
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#optica">
+                        Óptica
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#automacao">
+                        Automação
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#dashboard">
+                        Dashboard
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <button id="themeBtn"
+                    class="icon-btn"
+                    aria-label="Alternar modo escuro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button id="menuBtn"
+                    class="menu-btn"
+                    aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    SISTEMA ONLINE
+                </div>
+
+
+                <p class="hero-kicker">
+                    PROJETO INTEGRADOR • TECNOLOGIA E SUSTENTABILIDADE
+                </p>
+
+
+                <h1>
+                    O futuro do aquecimento
+                    <span>é inteligente.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Uma proposta tecnológica para transformar a piscina térmica
+                    do CEP em um sistema sustentável, automatizado e eficiente,
+                    utilizando energia solar, óptica, sensores e programação.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#solucao" class="btn btn-primary">
+                        <i class="fa-solid fa-play"></i>
+                        Explorar projeto
+                    </a>
+
+                    <a href="#dashboard" class="btn btn-outline">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Abrir dashboard
+                    </a>
+
+                </div>
+
+
+                <div class="hero-mini-stats">
+
+                    <div class="mini-stat">
+                        <i class="fa-solid fa-sun"></i>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Renovável</span>
+                        </div>
+                    </div>
+
+
+                    <div class="mini-stat">
+                        <i class="fa-solid fa-microchip"></i>
+
+                        <div>
+                            <strong>24h</strong>
+                            <span>Monitoramento</span>
+                        </div>
+                    </div>
+
+
+                    <div class="mini-stat">
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <div>
+                            <strong>+</strong>
+                            <span>Sustentável</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISUAL DO SISTEMA -->
+            <div class="hero-system">
+
+                <div class="system-orbit orbit-1"></div>
+                <div class="system-orbit orbit-2"></div>
+
+                <div class="system-sun">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+
+
+                <div class="system-card solar-card">
+
+                    <div class="system-card-icon">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+
+                    <div>
+                        <span>ENERGIA SOLAR</span>
+                        <strong id="heroSolar">86%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="system-card sensor-card">
+
+                    <div class="system-card-icon">
+                        <i class="fa-solid fa-temperature-half"></i>
+                    </div>
+
+                    <div>
+                        <span>TEMPERATURA</span>
+                        <strong id="heroTemperature">28.4°C</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="system-card pool-card">
+
+                    <div class="system-card-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+
+                    <div>
+                        <span>PISCINA</span>
+                        <strong>ESTÁVEL</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="system-core">
+
+                    <div class="core-ring ring-1"></div>
+                    <div class="core-ring ring-2"></div>
+
+                    <div class="core-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="energy-line line-1"></div>
+                <div class="energy-line line-2"></div>
+                <div class="energy-line line-3"></div>
+
+            </div>
+
+        </section>
+
+    </header>
+
+
+    <!-- INDICADORES -->
+    <section class="quick-stats">
+
+        <div class="quick-stat">
+            <div class="quick-icon yellow">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div>
+                <span>FONTE PRINCIPAL</span>
+                <strong>Energia Solar</strong>
+            </div>
+        </div>
+
+
+        <div class="quick-stat">
+            <div class="quick-icon blue">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <span>OBJETIVO</span>
+                <strong>Eficiência térmica</strong>
+            </div>
+        </div>
+
+
+        <div class="quick-stat">
+            <div class="quick-icon green">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <div>
+                <span>IMPACTO</span>
+                <strong>Mais sustentabilidade</strong>
+            </div>
+        </div>
+
+
+        <div class="quick-stat">
+            <div class="quick-icon purple">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div>
+                <span>CONTROLE</span>
+                <strong>Automatizado</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <main>
+
+
+        <!-- =====================
+             O DESAFIO
+        ====================== -->
+
+        <section id="desafio" class="section challenge-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">01</div>
+
+                <div>
+                    <p class="eyebrow">
+                        O PROBLEMA
+                    </p>
+
+                    <h2>
+                        Aquecer uma piscina exige energia.
+                        <span>Fazer isso de forma inteligente é o desafio.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="challenge-grid">
+
+                <div class="challenge-text">
+
+                    <h3>
+                        <i class="fa-solid fa-bolt"></i>
+                        O consumo energético
+                    </h3>
+
+                    <p>
+                        Piscinas térmicas necessitam de energia para manter
+                        a água em uma temperatura adequada. Um sistema
+                        convencional pode depender intensamente de fontes
+                        energéticas externas, aumentando custos e impactos
+                        ambientais.
+                    </p>
+
+                    <p>
+                        O AquaSolar CEP propõe uma alternativa baseada no
+                        aproveitamento da radiação solar e no uso de automação
+                        para evitar desperdícios.
+                    </p>
+
+
+                    <div class="challenge-points">
+
+                        <div class="challenge-point">
+                            <i class="fa-solid fa-check"></i>
+                            Reduzir desperdícios energéticos
+                        </div>
+
+                        <div class="challenge-point">
+                            <i class="fa-solid fa-check"></i>
+                            Aproveitar fontes renováveis
+                        </div>
+
+                        <div class="challenge-point">
+                            <i class="fa-solid fa-check"></i>
+                            Automatizar decisões do sistema
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="challenge-visual">
+
+                    <div class="energy-meter">
+
+                        <div class="meter-header">
+                            <span>DEMANDA ENERGÉTICA</span>
+                            <strong id="energyDemand">68%</strong>
+                        </div>
+
+                        <div class="meter-bar">
+                            <div class="meter-fill" id="energyMeterFill"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="problem-orbit">
+
+                        <div class="orbit-center">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+
+                        <div class="orbit-item orbit-energy">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div class="orbit-item orbit-temp">
+                            <i class="fa-solid fa-temperature-half"></i>
+                        </div>
+
+                        <div class="orbit-item orbit-leaf">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             SOLUÇÃO
+        ====================== -->
+
+        <section id="solucao" class="section solution-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">02</div>
+
+                <div>
+                    <p class="eyebrow">
+                        A SOLUÇÃO
+                    </p>
+
+                    <h2>
+                        Um ecossistema conectado que
+                        <span>capta, analisa e decide.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="solution-timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">01</div>
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+
+                    <h3>Captar</h3>
+
+                    <p>
+                        Coletores solares recebem a radiação e absorvem
+                        energia, favorecendo sua transformação em calor.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-connector"></div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">02</div>
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+
+                    <h3>Transportar</h3>
+
+                    <p>
+                        A água circula pelo sistema através de bombas
+                        controladas conforme as necessidades térmicas.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-connector"></div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">03</div>
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <h3>Analisar</h3>
+
+                    <p>
+                        Sensores enviam dados para um controlador que
+                        interpreta as condições do sistema.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-connector"></div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">04</div>
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <h3>Agir</h3>
+
+                    <p>
+                        Atuadores ligam ou desligam componentes para
+                        buscar uma operação eficiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-explanation">
+
+                <div class="explanation-text">
+
+                    <span class="small-label">
+                        COMO TUDO SE CONECTA
+                    </span>
+
+                    <h3>
+                        Energia + Física + Programação
+                    </h3>
+
+                    <p>
+                        A proposta integra conhecimentos de diferentes áreas.
+                        A Física explica a transferência de energia e os
+                        fenômenos ópticos. A Robótica fornece sensores e
+                        atuadores. A Programação permite criar regras para
+                        que o sistema responda automaticamente às informações.
+                    </p>
+
+                </div>
+
+
+                <div class="system-diagram">
+
+                    <div class="diagram-node node-sun">
+                        ☀️
+                        <span>Sol</span>
+                    </div>
+
+                    <div class="diagram-line line-sun-panel"></div>
+
+                    <div class="diagram-node node-panel">
+                        <i class="fa-solid fa-solar-panel"></i>
+                        <span>Coletores</span>
+                    </div>
+
+                    <div class="diagram-line line-panel-controller"></div>
+
+                    <div class="diagram-node node-controller">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Controle</span>
+                    </div>
+
+                    <div class="diagram-line line-controller-pool"></div>
+
+                    <div class="diagram-node node-pool">
+                        <i class="fa-solid fa-water"></i>
+                        <span>Piscina</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             LABORATÓRIO DE ÓPTICA
+        ====================== -->
+
+        <section id="optica" class="section optics-section">
+
+            <div class="section-heading light-heading">
+
+                <div class="section-number">03</div>
+
+                <div>
+                    <p class="eyebrow">
+                        LABORATÓRIO DE ÓPTICA
+                    </p>
+
+                    <h2>
+                        A luz não é apenas iluminação.
+                        <span>Ela é parte da solução.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="optics-tabs">
+
+                <button class="optic-tab active" data-optic="absorcao">
+                    Absorção
+                </button>
+
+                <button class="optic-tab" data-optic="reflexao">
+                    Reflexão
+                </button>
+
+                <button class="optic-tab" data-optic="refracao">
+                    Refração
+                </button>
+
+                <button class="optic-tab" data-optic="cores">
+                    Cores
+                </button>
+
+            </div>
+
+
+            <div class="optic-content active" id="absorcao">
+
+                <div class="optic-text">
+
+                    <span class="small-label">ABSORÇÃO DE RADIAÇÃO</span>
+
+                    <h3>
+                        Quanto mais energia absorvida,
+                        maior o potencial de aquecimento.
+                    </h3>
+
+                    <p>
+                        Quando a radiação solar atinge um material, parte dela
+                        pode ser absorvida. Nos coletores solares, materiais
+                        adequados são escolhidos para favorecer o aproveitamento
+                        dessa energia e sua transformação em calor.
+                    </p>
+
+                </div>
+
+
+                <div class="absorption-demo">
+
+                    <div class="demo-sun">
+                        ☀️
+                    </div>
+
+                    <div class="sun-rays-demo"></div>
+
+                    <div class="material material-light">
+                        Material claro
+                    </div>
+
+                    <div class="material material-dark">
+                        Material escuro
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="optic-content" id="reflexao">
+
+                <div class="optic-text">
+
+                    <span class="small-label">REFLEXÃO</span>
+
+                    <h3>
+                        Nem toda a energia que chega permanece no material.
+                    </h3>
+
+                    <p>
+                        Uma superfície pode refletir parte da radiação
+                        incidente. Por isso, a seleção do revestimento e do
+                        material dos coletores influencia a quantidade de
+                        energia aproveitada pelo sistema.
+                    </p>
+
+                </div>
+
+
+                <div class="reflection-demo">
+
+                    <div class="reflection-sun">☀️</div>
+
+                    <div class="incoming-ray"></div>
+
+                    <div class="surface"></div>
+
+                    <div class="reflected-ray"></div>
+
+                    <span class="incident-label">Radiação incidente</span>
+                    <span class="reflected-label">Radiação refletida</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="optic-content" id="refracao">
+
+                <div class="optic-text">
+
+                    <span class="small-label">REFRAÇÃO</span>
+
+                    <h3>
+                        A luz pode mudar de direção ao atravessar
+                        diferentes meios.
+                    </h3>
+
+                    <p>
+                        A refração ocorre devido à mudança de velocidade da
+                        luz ao passar de um meio para outro. Esse fenômeno
+                        ajuda a compreender o comportamento da luz ao interagir
+                        com materiais transparentes e diferentes superfícies.
+                    </p>
+
+                </div>
+
+
+                <div class="refraction-demo">
+
+                    <div class="medium air">
+                        AR
+                    </div>
+
+                    <div class="medium water">
+                        ÁGUA
+                    </div>
+
+                    <div class="ray ray-air"></div>
+
+                    <div class="ray ray-water"></div>
+
+                    <div class="normal-line"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="optic-content" id="cores">
+
+                <div class="optic-text">
+
+                    <span class="small-label">DISCO DE NEWTON</span>
+
+                    <h3>
+                        As cores revelam a composição da luz.
+                    </h3>
+
+                    <p>
+                        O Disco de Newton demonstra que a luz branca pode ser
+                        compreendida como uma combinação de diferentes cores.
+                        Essa ideia se relaciona à interação entre materiais e
+                        diferentes comprimentos de onda presentes na radiação.
+                    </p>
+
+                </div>
+
+
+                <div class="newton-demo">
+
+                    <div class="newton-disc" id="newtonDisc">
+                        <div class="disc-center"></div>
+                    </div>
+
+                    <button id="spinNewton" class="btn btn-primary">
+                        <i class="fa-solid fa-rotate"></i>
+                        Girar Disco
+                    </button>
+
+                    <p id="newtonStatus">
+                        Clique para observar a simulação.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CÂMARA ESCURA -->
+
+            <div class="camera-section">
+
+                <div class="camera-info">
+
+                    <span class="small-label">
+                        CÂMARA ESCURA
+                    </span>
+
+                    <h3>
+                        A luz viaja em trajetórias que podem ser estudadas
+                        e aplicadas.
+                    </h3>
+
+                    <p>
+                        A Câmara Escura demonstra a propagação retilínea da luz.
+                        Esse conhecimento auxilia na compreensão da direção dos
+                        raios solares e pode ser relacionado ao posicionamento
+                        e à inclinação dos coletores.
+                    </p>
+
+                </div>
+
+
+                <div class="camera-demo">
+
+                    <div class="camera-object">
+                        ☀️
+                    </div>
+
+                    <div class="camera-rays">
+                        <div class="camera-ray ray-a"></div>
+                        <div class="camera-ray ray-b"></div>
+                    </div>
+
+                    <div class="camera-box">
+                        <div class="camera-hole"></div>
+                        <div class="camera-image">☀️</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             AUTOMAÇÃO
+        ====================== -->
+
+        <section id="automacao" class="section automation-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">04</div>
+
+                <div>
+                    <p class="eyebrow">
+                        CENTRAL DE AUTOMAÇÃO
+                    </p>
+
+                    <h2>
+                        Dados entram.
+                        <span>Decisões inteligentes saem.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="automation-dashboard">
+
+                <div class="automation-left">
+
+                    <div class="automation-status">
+
+                        <span class="status-dot"></span>
+
+                        <div>
+                            <small>CONTROLADOR CENTRAL</small>
+                            <strong>Sistema operacional</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="automation-flow">
+
+                        <div class="auto-node sensor-node">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Sensor térmico</span>
+                        </div>
+
+                        <div class="auto-line"></div>
+
+                        <div class="auto-node controller-node">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Controlador</span>
+                        </div>
+
+                        <div class="auto-line"></div>
+
+                        <div class="auto-node actuator-node">
+                            <i class="fa-solid fa-fan"></i>
+                            <span>Atuador / Bomba</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="auto-description">
+
+                        <h3>Fluxo de decisão</h3>
+
+                        <ol>
+                            <li>Os sensores realizam medições.</li>
+                            <li>Os dados chegam ao controlador.</li>
+                            <li>O programa compara os valores com limites definidos.</li>
+                            <li>Os atuadores são acionados quando necessário.</li>
+                            <li>O ciclo se repete continuamente.</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+                <div class="automation-right">
+
+                    <div class="pseudo-code-header">
+
+                        <span>
+                            <i class="fa-solid fa-code"></i>
+                            aqua_control.js
+                        </span>
+
+                        <div class="code-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+
+                    <pre class="pseudo-code"><code><span class="keyword">const</span> temperaturaIdeal = <span class="number">30</span>;
+
+<span class="keyword">function</span> <span class="function">controlarPiscina</span>() {
+
+    <span class="keyword">if</span> (temperaturaAtual < temperaturaIdeal) {
+
+        <span class="keyword">if</span> (energiaSolar > <span class="number">40</span>) {
+            ligarBomba();
+            ativarCirculacao();
+        }
+
+    } <span class="keyword">else</span> {
+        desligarAquecimento();
+    }
+
+    atualizarSensores();
+}</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             DASHBOARD
+        ====================== -->
+
+        <section id="dashboard" class="section dashboard-section">
+
+            <div class="dashboard-top">
+
+                <div>
+
+                    <span class="dashboard-label">
+                        <span class="live-dot"></span>
+                        DADOS EM TEMPO REAL
+                    </span>
+
+                    <h2>
+                        Central de Monitoramento
+                    </h2>
+
+                </div>
+
+
+                <div class="weather-control">
+
+                    <span>Condição climática:</span>
+
+                    <button class="weather-btn active" data-weather="sunny">
+                        ☀️ Sol
+                    </button>
+
+                    <button class="weather-btn" data-weather="cloudy">
+                        ☁️ Nublado
+                    </button>
+
+                    <button class="weather-btn" data-weather="rainy">
+                        🌧️ Chuva
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARDS -->
+
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>Temperatura da água</span>
+
+                        <div class="card-icon temp-icon">
+                            <i class="fa-solid fa-temperature-half"></i>
+                        </div>
+
+                    </div>
+
+                    <strong class="big-number" id="dashTemp">
+                        28.4<span>°C</span>
+                    </strong>
+
+                    <div class="card-footer positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        Monitoramento ativo
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>Intensidade solar</span>
+
+                        <div class="card-icon sun-icon">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+
+                    </div>
+
+                    <strong class="big-number" id="dashSolar">
+                        86<span>%</span>
+                    </strong>
+
+                    <div class="card-footer positive">
+                        <i class="fa-solid fa-sun"></i>
+                        Captação eficiente
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>Eficiência estimada</span>
+
+                        <div class="card-icon efficiency-icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+
+                    </div>
+
+                    <strong class="big-number" id="dashEfficiency">
+                        74<span>%</span>
+                    </strong>
+
+                    <div class="card-footer positive">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Operação estável
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-top">
+
+                        <span>Status da bomba</span>
+
+                        <div class="card-icon pump-icon">
+                            <i class="fa-solid fa-fan"></i>
+                        </div>
+
+                    </div>
+
+                    <strong class="pump-value" id="dashPump">
+                        LIGADA
+                    </strong>
+
+                    <div class="card-footer">
+                        <span class="small-status-dot"></span>
+                        Circulação ativa
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRÁFICO -->
+
+            <div class="chart-area">
+
+                <div class="chart-header">
+
+                    <div>
+
+                        <span>ANÁLISE TÉRMICA</span>
+
+                        <h3>Variação da temperatura</h3>
+
+                    </div>
+
+                    <select id="chartPeriod" aria-label="Selecionar período do gráfico">
+
+                        <option value="10">Últimos 10 minutos</option>
+                        <option value="20">Últimos 20 minutos</option>
+                        <option value="30">Últimos 30 minutos</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas id="temperatureChart"
+                        aria-label="Gráfico da temperatura da piscina"
+                        role="img">
+                    </canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             SIMULADOR
+        ====================== -->
+
+        <section id="simulador" class="section advanced-simulator">
+
+            <div class="section-heading">
+
+                <div class="section-number">05</div>
+
+                <div>
+                    <p class="eyebrow">
+                        SIMULADOR AVANÇADO
+                    </p>
+
+                    <h2>
+                        Você escolhe as condições.
+                        <span>O sistema responde.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="simulator-layout">
+
+
+                <div class="simulator-controls">
+
+
+                    <div class="sim-control">
+
+                        <div class="sim-label">
+                            <span>Temperatura inicial</span>
+                            <strong id="simTempValue">24°C</strong>
+                        </div>
+
+                        <input type="range"
+                            id="simTemp"
+                            min="15"
+                            max="40"
+                            value="24">
+
+                    </div>
+
+
+                    <div class="sim-control">
+
+                        <div class="sim-label">
+                            <span>Intensidade solar</span>
+                            <strong id="simSolarValue">70%</strong>
+                        </div>
+
+                        <input type="range"
+                            id="simSolar"
+                            min="0"
+                            max="100"
+                            value="70">
+
+                    </div>
+
+
+                    <div class="sim-control">
+
+                        <div class="sim-label">
+                            <span>Temperatura desejada</span>
+                            <strong id="simIdealValue">30°C</strong>
+                        </div>
+
+                        <input type="range"
+                            id="simIdeal"
+                            min="20"
+                            max="35"
+                            value="30">
+
+                    </div>
+
+
+                    <div class="sim-control">
+
+                        <div class="sim-label">
+                            <span>Qualidade do isolamento</span>
+                            <strong id="simIsolationValue">80%</strong>
+                        </div>
+
+                        <input type="range"
+                            id="simIsolation"
+                            min="0"
+                            max="100"
+                            value="80">
+
+                    </div>
+
+
+                    <button id="runSimulation" class="btn btn-primary sim-run">
+
+                        <i class="fa-solid fa-play"></i>
+                        Executar simulação
+
+                    </button>
+
+                    <button id="resetSimulation" class="btn btn-outline">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Restaurar valores
+
+                    </button>
+
+                </div>
+
+
+                <div class="simulator-screen">
+
+
+                    <div class="screen-header">
+
+                        <span>
+                            <span class="live-dot"></span>
+                            ANÁLISE DO CONTROLADOR
+                        </span>
+
+                        <span id="simulationTime">
+                            00:00
+                        </span>
+
+                    </div>
+
+
+                    <div class="simulation-main-status">
+
+                        <div id="simulationIcon">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+
+                        <div>
+                            <span>STATUS</span>
+
+                            <h3 id="simulationStatus">
+                                Aguardando simulação
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="simulation-data">
+
+                        <div>
+                            <span>Diferença térmica</span>
+                            <strong id="simDifference">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Eficiência calculada</span>
+                            <strong id="simEfficiency">--</strong>
+                        </div>
+
+                        <div>
+                            <span>Estado da bomba</span>
+                            <strong id="simPump">--</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="simulation-message" id="simulationMessage">
+
+                        Configure os valores ao lado e execute a simulação
+                        para observar as decisões do AquaSolar CEP.
+
+                    </div>
+
+
+                    <div class="simulation-steps">
+
+                        <div class="sim-step">
+                            <span>1</span>
+                            Sensores coletam informações
+                        </div>
+
+                        <div class="sim-step">
+                            <span>2</span>
+                            Controlador processa dados
+                        </div>
+
+                        <div class="sim-step">
+                            <span>3</span>
+                            Sistema toma uma decisão
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             IMPACTO
+        ====================== -->
+
+        <section class="impact-section">
+
+            <div class="impact-background">
+
+                <div class="impact-orb orb-one"></div>
+                <div class="impact-orb orb-two"></div>
+
+            </div>
+
+
+            <div class="impact-content">
+
+                <span class="impact-label">
+                    <i class="fa-solid fa-leaf"></i>
+                    INOVAÇÃO E IMPACTO SOCIAL
+                </span>
+
+                <h2>
+                    Tecnologia não serve apenas para criar.
+                    <span>Ela também pode transformar.</span>
+                </h2>
+
+                <p>
+                    O AquaSolar CEP representa uma proposta de integração entre
+                    ciência, sustentabilidade e inclusão. O projeto busca mostrar
+                    como conhecimentos aprendidos em sala de aula podem ser
+                    aplicados na busca por soluções para desafios reais.
+                </p>
+
+
+                <div class="impact-cards">
+
+                    <div>
+                        <i class="fa-solid fa-leaf"></i>
+                        <strong>Sustentabilidade</strong>
+                        <span>Valorização de fontes renováveis.</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-school"></i>
+                        <strong>Educação</strong>
+                        <span>Aprendizado aplicado a problemas reais.</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-universal-access"></i>
+                        <strong>Inclusão</strong>
+                        <span>Tecnologia pensada para todos.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             ACESSIBILIDADE
+        ====================== -->
+
+        <section id="acessibilidade" class="section accessibility-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">06</div>
+
+                <div>
+                    <p class="eyebrow">
+                        ACESSIBILIDADE DIGITAL
+                    </p>
+
+                    <h2>
+                        Um projeto tecnológico só é completo quando
+                        <span>mais pessoas conseguem utilizá-lo.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="accessibility-grid">
+
+
+                <div class="access-card">
+
+                    <div class="access-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <h3>Contraste</h3>
+
+                    <p>
+                        Combinação de cores pensada para manter uma boa
+                        diferenciação entre informações importantes.
+                    </p>
+
+                </div>
+
+
+                <div class="access-card">
+
+                    <div class="access-icon">
+                        <i class="fa-solid fa-text-height"></i>
+                    </div>
+
+                    <h3>Legibilidade</h3>
+
+                    <p>
+                        Tipografia organizada, tamanhos adequados e
+                        espaçamento que facilita a leitura.
+                    </p>
+
+                </div>
+
+
+                <div class="access-card">
+
+                    <div class="access-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+
+                    <h3>Responsividade</h3>
+
+                    <p>
+                        Interface adaptada para diferentes tamanhos de tela,
+                        incluindo computadores e celulares.
+                    </p>
+
+                </div>
+
+
+                <div class="access-card">
+
+                    <div class="access-icon">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
+
+                    <h3>Navegação</h3>
+
+                    <p>
+                        Estrutura clara e elementos interativos identificados
+                        para facilitar o uso do site.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAINEL -->
+
+            <div class="accessibility-panel">
+
+                <div class="access-panel-title">
+
+                    <i class="fa-solid fa-universal-access"></i>
+
+                    <div>
+                        <h3>Painel de acessibilidade</h3>
+                        <span>Personalize sua experiência no site.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="access-controls">
+
+                    <button id="increaseFont">
+                        <i class="fa-solid fa-plus"></i>
+                        Texto
+                    </button>
+
+                    <button id="decreaseFont">
+                        <i class="fa-solid fa-minus"></i>
+                        Texto
+                    </button>
+
+                    <button id="contrastToggle">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        Contraste
+                    </button>
+
+                    <button id="reduceMotion">
+                        <i class="fa-solid fa-pause"></i>
+                        Reduzir animações
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             FAQ
+        ====================== -->
+
+        <section class="section faq-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">07</div>
+
+                <div>
+                    <p class="eyebrow">
+                        DÚVIDAS SOBRE O PROJETO
+                    </p>
+
+                    <h2>
+                        Perguntas frequentes
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="faq-list">
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            O AquaSolar CEP utiliza apenas energia solar?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            A proposta conceitual prioriza o aproveitamento da
+                            energia solar para o aquecimento. Sistemas reais
+                            podem possuir fontes auxiliares conforme necessidades
+                            técnicas e condições de operação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Qual é a função dos sensores?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Os sensores coletam informações como a temperatura
+                            da água e outras condições importantes, permitindo
+                            que o controlador tome decisões baseadas em dados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Onde a Óptica aparece no projeto?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            A Óptica aparece no estudo da interação da radiação
+                            com os materiais dos coletores, envolvendo absorção,
+                            reflexão, refração, comportamento das cores e direção
+                            da propagação da luz.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            O sistema funciona automaticamente?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Essa é a proposta principal da automação: sensores
+                            enviam dados ao controlador, que executa regras
+                            programadas e aciona atuadores quando necessário.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Como o projeto contribui para a sustentabilidade?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            A proposta busca utilizar uma fonte renovável,
+                            otimizar o uso de energia e evitar o funcionamento
+                            desnecessário dos equipamentos por meio da automação.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             EQUIPE
+        ====================== -->
+
+        <section id="equipe" class="section team-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">08</div>
+
+                <div>
+                    <p class="eyebrow">
+                        QUEM DESENVOLVEU
+                    </p>
+
+                    <h2>
+                        A equipe por trás do
+                        <span>AquaSolar CEP.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="team-grid">
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>Integrante 01</h3>
+
+                    <span>Programação e desenvolvimento</span>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>Integrante 02</h3>
+
+                    <span>Pesquisa científica</span>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>Integrante 03</h3>
+
+                    <span>Design e apresentação</span>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>Integrante 04</h3>
+
+                    <span>Automação e tecnologia</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             REFERÊNCIAS
+        ====================== -->
+
+        <section id="referencias" class="section references-section">
+
+            <div class="section-heading">
+
+                <div class="section-number">09</div>
+
+                <div>
+                    <p class="eyebrow">
+                        BASE DO PROJETO
+                    </p>
+
+                    <h2>
+                        Referências e conhecimentos utilizados
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="references-list">
+
+                <div class="reference-item">
+                    <i class="fa-solid fa-book"></i>
+
+                    <div>
+                        <strong>Óptica e Física</strong>
+                        <p>
+                            Conceitos de absorção, reflexão, refração,
+                            propagação da luz e comportamento das cores.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reference-item">
+                    <i class="fa-solid fa-solar-panel"></i>
+
+                    <div>
+                        <strong>Energia Solar</strong>
+                        <p>
+                            Princípios gerais de aproveitamento da radiação
+                            solar e conversão de energia em sistemas térmicos.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reference-item">
+                    <i class="fa-solid fa-robot"></i>
+
+                    <div>
+                        <strong>Robótica e Automação</strong>
+                        <p>
+                            Utilização conceitual de sensores, controladores,
+                            atuadores e lógica de programação.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reference-item">
+                    <i class="fa-solid fa-code"></i>
+
+                    <div>
+                        <strong>Tecnologias Web</strong>
+                        <p>
+                            Desenvolvimento utilizando HTML, CSS e JavaScript
+                            para criar uma experiência interativa.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+
+    <button id="backToTop"
+        class="back-to-top"
+        aria-label="Voltar ao topo">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#inicio" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
+
+                    AquaSolar <strong>CEP</strong>
+                </a>
+
+                <p>
+                    Tecnologia, ciência e sustentabilidade conectadas em uma
+                    proposta para o futuro da comunidade escolar.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Navegação</h4>
+
+                <a href="#desafio">O Desafio</a>
+                <a href="#solucao">Solução</a>
+                <a href="#optica">Óptica</a>
+                <a href="#automacao">Automação</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Projeto</h4>
+
+                <a href="#dashboard">Dashboard</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#acessibilidade">Acessibilidade</a>
+                <a href="#equipe">Equipe</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 AquaSolar CEP — Projeto Integrador.
+            </span>
+
+            <span>
+                Desenvolvido com ☀️ para o CEP.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
